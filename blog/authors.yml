@@ -15,3 +15,10 @@ slorber:
   title: Docusaurus maintainer
   url: https://sebastienlorber.com
   image_url: https://github.com/slorber.png
+
+david:
+  name: David Loughlin
+  title: Maintainer of Real Threads
+  url: https://github.com/wemhr30
+  image_url: https://github.com/wemhr30.png
+

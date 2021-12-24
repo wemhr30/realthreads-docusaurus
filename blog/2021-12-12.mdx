@@ -1,0 +1,53 @@
+---
+slug: 12-december-2021
+title: Week Ending 12 Dec 2021
+authors:
+  name: David
+  url: https://github.com/wemhr30
+  image_url: https://github.com/wemhr30.png
+tags: [heroku,django,python,postgres,docusaurus,look-and-feel]
+---
+
+More on hosting Python app with Heroku. Early explorations of Django and Postgres. Setting up a blog and some look-and-feel.
+
+<!--truncate-->
+
+# Week Ending 12 Dec 2021
+
+## Heroku
+I promoted the Python-Getting-Started app from local, through review, staging and to production. Following the tutorial, I also added a Postgres database to each of the apps.
+
+I had some problems getting heroku local web to point to local Postgres (see Postgres below) - or validating that it is. I don’t know if this is a problem or not. The main impact so far is that in the tutorial, I [set up a logging service](https://devcenter.heroku.com/articles/getting-started-with-python#provision-add-ons) that writes a greeting log to the database. The [log is accessed](https://devcenter.heroku.com/articles/getting-started-with-python#provision-a-database) from the url site/db. It works as intended in production, but throws an error locally because the table doesn’t exist.
+
+
+## Django
+The front end framework for the python-getting-started app is Django. The only problem so far was that I couldn’t get the static files (e.g. python logo) to render when running locally. [It seems](https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development) I might need to be running something extra locally to serve static files in Django.
+
+## Postgres
+Installed Postgres locally. All seemed to be fine. Ran the command
+
+	$ createdb python_getting_started
+
+locally and can see the db, but not sure if it’s actually used when running 
+
+	$ herko local web 
+	
+from Python-getting-started - the logging db url doesn't work. Need to do more research.
+
+## Look and feel
+Downloaded Vectornator for iPhone and drew a thread logo. Exported this as an .svg file and created a set of .ico assets using an online converter.
+Used Adobe online colour wheel tool to generate a set of complimentary and contrasting colours. Tested these in light and dark modes using Keynote.
+Created a set of simple chart templates in Keynote. Exported these to PDF and converted to SVG online.
+
+## Docusaurus
+Started tweaking the markdown and static files to change images, look and feel etc.
+Added a blog and transferred content created in iA Writer to the the site. 
+
+## Python
+Completed [week 2](https://www.coursera.org/learn/python-for-applied-data-science-ai/home/week/2).  
+
+## Project
+Thinking of three parts:
+* Data projects in Python hosted on Heroku at [realthreads.io](http://realthreads.io/)
+* Docs and commentary in Docusauraus hosted on Netifly at [stories.realthreads.io](http://docs.realthreads.io/)
+* Random miscellaneous projects in Next.js on Threads Central hosted on Netlify at [threadscentral.io](https://threadscentral.io/)

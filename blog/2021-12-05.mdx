@@ -1,0 +1,83 @@
+---
+slug: 5-december-2021
+title: Week Ending 5 Dec 2021
+authors:
+  name: David
+  url: https://github.com/wemhr30
+  image_url: https://github.com/wemhr30.png
+tags: [heroku,netlify,github,cloudflare,vscode,ia-writer,terminal,python]
+---
+
+# Week Ending 5 Dec 2021
+
+Mainly about setting up hosting, registering and configuring domains, and setting up dev tools.
+
+<!--truncate-->
+
+## Heroku
+Having read that Heroku supports Python, PlotLy and Jupyter well, my initial thought was to use Heroku as a hosting platform. Set up was pretty easy, two things in particular: 1) the option to create a new pipeline during set up; and 2) the option to enable ‘review’ apps - temporary apps that can be spun up off a GitHub pull request.
+
+I initially set up a pipeline with two apps: [realthreads-staging](https://realthreads-staging.herokuapp.com/); and [realthreads-production](https://realthreads-production.herokuapp.com/).
+
+A few road bumps: 
+* After initially registering a domain with [GoDaddy](https://www.godaddy.com/), I learnt that [Heroku doesn’t work with GoDaddy Domain management](https://devcenter.heroku.com/articles/custom-domains#add-a-custom-root-domain), because the DNS settings for the primary domain do not support CNAME. This prompted me to switch to [Cloudflare](https://www.cloudflare.com/) for Domain Management because they had docs about [how to configure the DNS settings for use with Heroku](https://support.cloudflare.com/hc/en-us/articles/205893698).
+* I tried to get a simple Docusaurus site running on Heroku. But it seems that Heroku [doesn’t really support static sites](https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489), so this wasn’t possible.
+
+Later, I read about a one-click deploy [Jupyter notebook app for Heroku](https://elements.heroku.com/buttons/heroku/heroku-jupyter). The docs explained that it used Postgres for the data store, so I added free Postgres DB to both of the apps. However, there is a [known bug](https://github.com/pl31/heroku-jupyter/issues/38) in the app since an update from Notebook 4 to 5, which means the build always fails.
+
+I found a basic Python app template with a tutorial [Getting Started with Python](https://devcenter.heroku.com/articles/getting-started-with-python) and used one-click deploy to deploy that to a new free dyno. Next, I intend to grab the code for that app and deploy it to the realthreads pipeline.
+
+Heroku Docs are excellent. They point you to useful tools and resources to help you complete every step required to complete the task at hand. The language is very clear.
+
+## GitHub
+I had an [old GitHub account](https://github.com/wemhr30) that I never really used. I resurrected this. Having worked with GitLab a fair bit over the last couple of years, I was familiar with most of the important concepts, so set up was easy and the interface is pretty straight forward.
+
+## Cloudflare
+My initial pick for Domain registration and management was GoDaddy, just because it was a name I knew. However, when I tried to connect realthreads.co.uk to Heroku, I learned this wasn’t possible. The Heroku docs mentioned a few different options. They called out that Cloudflare had docs (with link) for configuring their DNS settings to work with Heroku, so I chose Cloudflare.
+
+I transferred realthreads.co.uk to Cloudflare. To do this, I first had to set up Cloudflare on the domain, this involved changing some settings in GoDaddy before initiating the transfer. 
+
+It said it would take a while to process, so to avoid being held up, I also registered realthreads.io directly with Cloudflare. This was straightforward to do.
+
+Once I had registered realthreads.io, I had to add CNAME DNS records for the primary domain and www domain.  This was a bit tricky, because the docs talked about the primary domain as a special case, but it wasn’t clear that it was all set up in onc config area in Cloudflare. And the UI of that area seemed to imply you needed to A and AAAA records before you could add a CNAME record. Don’t think this is the case, because it all seems to be working!
+
+## Netlify
+Created a new site at custom domain - [threadscentral.io](https://threadscentral.io/) - in about 15 minutes all on my hone! It was super easy, but didn’t learn much - except how easy this could all be!
+
+## Terminal/CLI
+Never really used Terminal before. Installed various tools needed to complete tasks. So far, played with:
+* brew
+* heroku
+* python
+* python3 (set 3 to default, so can just use python ..)
+* npm
+* yarn
+
+Getting the hang of the conventions:
+
+	$ npm start
+	$ heroku local web
+	$ python3 --version
+	$ git push heroku main
+	$ heroku pg --app realthreads-staging
+
+
+
+Now I understand why the CLI and logs are such an important part of the developer experience.
+
+## VS Code
+Got [VS Code](https://code.visualstudio.com/) up and running locally. On the whole ok, but I’ve hit a few silly problems like: local branches that no longer exist in the remote; cross-contamination of branches across different local repos; committing to main branch instead of feature branch.
+
+## Python
+I’ve started an IBM course on Coursera [Python for Data Science, AI & Development](https://coursera.org/share/cf432eb4514df81567a668806d5c9dc4) Topics so far: 
+* Data types
+* Variables and expressions
+* Lists 
+* Tuples
+* Sets 
+* Dictionaries
+
+Uploading labs to [gist](https://gist.github.com/wemhr30).
+
+## iA Writer
+Writing content in iA Writer. It's convenient for writing on the commute with a bluetooth keyboard and iPhone.
