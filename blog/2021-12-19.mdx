@@ -1,0 +1,26 @@
+---
+slug: 19-december-2021
+title: Week Ending 19 Dec 2021
+authors:
+  name: David
+  url: https://github.com/wemhr30
+  image_url: https://github.com/wemhr30.png
+tags: [docusaurus,netlify,postgres,python]
+---
+
+# Week Ending 19 Dec 2021
+
+Hosted Docusaurus site on Netlify. Set up a database to capture page view reports on Heroku. Used IBM Watson Studio to convert speech to text and translate between languages. 
+
+<!--truncate-->
+
+## Docusaurus on Netlify
+I hosted the Docusaurus site on Netlify and used Cloudflare to configure DNS settings for a new subdomain. The site is available at [stories.realthreads.io](https://stories.realthreads.io/).
+
+I used the 'Import Existing Project' option in Netlify to connect to the GitHub repo. The build failed first time due to a broken link. The log showed exactly where the broken link was, so it was easy to locate and fix. Now the tests run in GitHub when I create a new pull request, the tests run in GitHub which is handy.
+
+## Python Getting Started App
+I made some changes to the look and feel of Python Getting Started app hosted on Heroku at [realthreads.io](http://realthreads.io/). I also added the [papertrail](https://devcenter.heroku.com/articles/getting-started-with-python#provision-add-ons) logging add-on and created the required tables using manage.py migrate. The app now includes a simple [Page View Report](https://realthreads.io/db/) with data stored in the Postgres database.
+
+## Python course
+I completed week 3 & 4 of the IBM Python Course. The exercises included setting up an account with IBM Cloud and using IBM Watson Studio to [convert speech to text](https://gist.github.com/wemhr30/faf27fc4f7275e610bef009e5f891085) and translate between languages.

@@ -57,6 +57,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: 'https://realthreads.io',
+            label: 'Threads',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/wemhr30/realthreads-site',
             label: 'GitHub',
             position: 'right',
@@ -70,8 +75,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Stories',
+                to: '/docs/faang',
               },
             ],
           },
@@ -80,15 +85,11 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/realthreads',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/realthreadsio',
               },
             ],
           },
@@ -101,12 +102,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/wemhr30',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Real Threads. Built with Docusaurus. Hosted on Netlify`,
       },
       prism: {
         theme: lightCodeTheme,
