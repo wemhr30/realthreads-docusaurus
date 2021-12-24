@@ -45,19 +45,19 @@ const config = {
       navbar: {
         title: 'Real Threads',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Real Threads Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'faang',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Stories',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/wemhr30/realthreads-site',
             label: 'GitHub',
             position: 'right',
           },
