@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Doughnut',
-    Svg: require('../../static/img/chart_doughnut.svg').default,
+    Svg: require('../../static/img/chart_doughnut_fix.svg').default,
     description: (
       <>
        A doughnut chart created in Keynote, copied as PDF and converted to SVG.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Stacked Column',
-    Svg: require('../../static/img/chart_column.svg').default,
+    Svg: require('../../static/img/chart_column_fix.svg').default,
     description: (
       <>
        A stacked column chart created in Keynote, copied as PDF and converted to SVG.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Area',
-    Svg: require('../../static/img/chart_area.svg').default,
+    Svg: require('../../static/img/chart_area_fix.svg').default,
     description: (
       <>
         An area chart created in Keynote, copied as PDF and converted to SVG.
