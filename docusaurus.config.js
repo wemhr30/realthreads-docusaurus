@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/wemhr30/realthreads-site',
+          editUrl: 'https://github.com/wemhr30/realthreads-docusaurus',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/wemhr30/realthreads-site',
+            'https://github.com/wemhr30/realthreads-docusaurus',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,12 +57,12 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://realthreads.io',
-            label: 'Threads',
+            href: 'https://data.realthreads.io',
+            label: 'Data',
             position: 'left',
           },
           {
-            href: 'https://github.com/wemhr30/realthreads-site',
+            href: 'https://github.com/wemhr30/realthreads-docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -96,6 +96,10 @@ const config = {
           {
             title: 'More',
             items: [
+              {
+                label: 'Loose Threads',
+                href: 'https://loose.realthreads.io',
+              },
               {
                 label: 'Blog',
                 to: '/blog',
